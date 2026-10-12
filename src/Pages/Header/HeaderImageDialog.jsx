@@ -6,8 +6,9 @@ import { useThemeContext } from "../../Hooks/ThemeContext";
 import Deepak from "@src/assets/Images/deepak.jpg";
 import Deepak1 from "@src/assets/Images/deepak-1.jpg";
 import Deepak2 from "@src/assets/Images/deepak-2.jpg";
+import Deepak3 from "@src/assets/Images/deepak-3.jpg";
 
-const imagesList = [Deepak, Deepak1, Deepak2];
+const imagesList = [Deepak, Deepak1, Deepak2, Deepak3];
 
 function HeaderImageDialog({ imageDialogVisible, onClose }) {
   const [selectedImage, setSelectedImage] = useState(imagesList[0]);
