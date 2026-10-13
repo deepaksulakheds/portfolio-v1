@@ -30,7 +30,7 @@ const EXPERIENCE_DATA = [
         timePeriod: getFormattedTimePeriod("1-may-2026", "present"),
         location: `Bengaluru | KA | IN`,
         descriptions: [
-          `Contributing to the development and enhancement of scalable backend services and high-performance web applications while supporting system reliability and performance improvements.`,
+          `Contributing to the development and enhancement of scalable backend services and high-performance applications while supporting system reliability and performance improvements.`,
           `Led the implementation of localization at the backend API and data and alert pipeline level, supporting 5 languages and regions.`,
         ],
       },
@@ -40,15 +40,12 @@ const EXPERIENCE_DATA = [
         timePeriod: getFormattedTimePeriod("1-sep-2023", "1-may-2026"),
         location: `Bengaluru | KA | IN`,
         descriptions: [
-          `Implemented an automated database migration and schema management process across multiple environments, eliminating manual effort and improving data consistency, efficiency, and reliability.`,
-          `Led the POC and production migration from Redis to DragonflyDB, resulting in improved cache performance, higher Queries Per Second (QPS), and lower latency.`,
-          `Developing responsive, high-performance web apps using React and Node.js. Skilled in component-based architecture, REST/GraphQL APIs integration, and MUI.`,
-          `Led migration from MySQL to PostgreSQL, updating codebase and database schema, ensuring data integrity, managing data migration processes, and optimizing database performance.`,
-          `Identified and resolved SCA and SAST security vulnerabilities through VAPT, implementing fixes and security best practices to ensure robust and secure backend services and APIs.`,
-          `Developed Data-Pipelines for data processing and ingestion, implemented backend services, REST and GraphQL APIs with Node.js, and automated report delivery using cron jobs. contributing to core functionality.`,
-          `Redesigned and optimized database schemas and queries for performance, scalability, and efficient data handling. Implemented Redis-based caching in backend systems to boost performance and reduce response times.`,
-          `Contributed to multiple projects by implementing end-to-end features and creating a rich dashboard with React and Material-UI for data visualization and consistent UI.`,
-          `Proven ability to translate designs and prototypes into fully functional, end-to-end modules using React.js, Node.js, REST, GraphQL, and various SQL & NoSQL databases.`,
+          `Automated database migrations and schema management across multiple environments, reducing manual effort and improving data consistency, operational efficiency, and reliability.`,
+          `Led the POC and system migration from Redis to DragonflyDB, improving caching performance, increasing Queries Per Second (QPS), and reducing latency.`,
+          `Led migration from MySQL to PostgreSQL, updating the codebase and database schema, ensuring data integrity, managing data migration processes, and improving database performance and response times.`,
+          `Built responsive, high-performance web apps using React and Node.js. Skilled in component-based architecture, REST/GraphQL APIs integration, and MUI.`,
+          `Identified and resolved SCA and SAST vulnerabilities through security assessments and VAPT, implementing security best practices to strengthen backend services and APIs.`,
+          `Developed and optimized backend services and data-ingestion pipelines, implemented REST and GraphQL APIs, scheduled report delivery using cron jobs, and Redis-based caching to improve response times.`,
         ],
       },
       {
@@ -57,10 +54,8 @@ const EXPERIENCE_DATA = [
         timePeriod: getFormattedTimePeriod("1-jun-2023", "1-sep-2023"),
         location: `Bengaluru | KA | IN`,
         descriptions: [
-          `Developed <span style="font-weight: bold; text-decoration: underline; font-size: 15px">Telematic Analytics - Zeliot</span> as a mini-project during my Full-Stack Development Internship, focusing on creating a platform to collect, process, analyze, and visualize telematic device data, providing actionable insights and KPIs.`,
-          `Implemented frontend components using React to create intuitive and responsive user interfaces.`,
-          `Integrated third-party APIs in backend systems, making sure data flowed smoothly with external systems while maintaining the performance and reliability.`,
-          `Participated in code reviews, debugging, and testing to ensure high-quality software deliverables.`,
+          `Developed <span style="font-weight: bold; text-decoration: underline; font-size: 15px">Telematic Analytics—Zeliot</span> as a mini-project, a platform for processing, analyzing, and visualizing telematics device data and KPIs.`,
+          `Implemented responsive React components and participated in code reviews, debugging, and testing.`,
         ],
       },
     ],
@@ -134,7 +129,12 @@ function ExperienceComponent({ attachmentToggle }) {
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [secretContext.secretEnabled, attachmentToggle]);
+  }, [
+    secretContext.secretEnabled,
+    attachmentToggle,
+    getHotkeyStringFromEvent,
+    userPlatform,
+  ]);
 
   return (
     <Grid className="experienceContainer">
@@ -378,39 +378,32 @@ function ExperienceItem({ experienceObj, themeContext }) {
                   marginBottom: "20px",
                 }}
               >
-                {title.descriptions.map((desc) => (
-                  <Grid
-                    key={desc}
-                    sx={{
-                      fontSize: 14,
-                      display: "flex",
-                      color: themeContext.bodyText,
-                      maxWidth: "700px",
-                    }}
-                  >
-                    ➛
-                    {desc.includes("</") ? (
-                      <Typography
-                        key={desc}
-                        sx={{
-                          fontSize: 14,
-                          marginLeft: 0.7,
-                        }}
-                        dangerouslySetInnerHTML={{ __html: desc }}
-                      ></Typography>
-                    ) : (
-                      <Typography
-                        key={desc}
-                        sx={{
-                          fontSize: 14,
-                          marginLeft: 0.7,
-                        }}
-                      >
-                        {desc}
-                      </Typography>
-                    )}
-                  </Grid>
-                ))}
+                {title.descriptions.map((desc) =>
+                  desc.includes("</") ? (
+                    <Typography
+                      key={desc}
+                      sx={{
+                        fontSize: 14,
+                        marginLeft: 0.7,
+                        color: themeContext.bodyText,
+                        maxWidth: "700px",
+                      }}
+                      dangerouslySetInnerHTML={{ __html: `● &nbsp;${desc}` }}
+                    ></Typography>
+                  ) : (
+                    <Typography
+                      key={desc}
+                      sx={{
+                        fontSize: 14,
+                        marginLeft: 0.7,
+                        color: themeContext.bodyText,
+                        maxWidth: "700px",
+                      }}
+                    >
+                      ● &nbsp;{desc}
+                    </Typography>
+                  )
+                )}
               </Grid>
             </Grid>
           </Grid>
