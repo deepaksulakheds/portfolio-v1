@@ -20,7 +20,7 @@ import { useSecretContext } from "../../Hooks/SecretContext";
 import { useNavigate } from "react-router-dom";
 import { useNavigationMenusContext } from "../../Hooks/NavMenuContext";
 import { useHotkeyAndPlatform } from "../../Utils/useHotkeyAndPlatform";
-import ProfileImage from "@src/assets/Images/deepak.avif";
+import ProfileImage from "/Profile/deepak.avif";
 
 let ageInterval;
 
