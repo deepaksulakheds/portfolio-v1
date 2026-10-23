@@ -1,0 +1,40 @@
+{
+  "name": "Deepak Sulakhe",
+  "title": "Software Engineer - 2",
+  "location": "Gadag | Karnataka | India",
+  "bio": "Results-driven Software Engineer with 3+ years of professional experience in full-stack development using React, Node.js, REST and GraphQL APIs, and SQL/NoSQL databases. Proven ability to translate designs and prototypes into fully functional, end-to-end applications. Experienced in developing backend services, data-ingestion pipelines, and delivering end-to-end high-performance features. Collaborated with cross-teams to develop user-focused systems.",
+  "email": "deepaksulakheds@gmail.com",
+  "skills": [
+    "Frontend Development",
+    "ReactJS",
+    "Material UI",
+    "Backend Development",
+    "NodeJS",
+    "GraphQL",
+    "REST APIs",
+    "ExpressJS",
+    "Authentication (JWT/JWE)",
+    "SQL (MySQL, PgSQL)",
+    "NoSQL (MongoDB, Redis)",
+    "Kubernetes",
+    "Docker",
+    "Postman",
+    "Git",
+    "C / C++",
+    "JavaScript",
+    "Python",
+    "Full-Stack Development ",
+    "Microservices "
+  ],
+  "social": {
+    "github": "https://github.com/deepaksulakheds",
+    "linkedin": "https://www.linkedin.com/in/deepaksulakheds/",
+    "portfolio": "https://deepaksulakheds.github.io/portfolio-v1/"
+  },
+  "images": [
+    "https://deepaksulakheds.github.io/portfolio-v1/Profile/deepak.avif",
+    "https://deepaksulakheds.github.io/portfolio-v1/Profile/deepak-1.avif",
+    "https://deepaksulakheds.github.io/portfolio-v1/Profile/deepak-2.avif",
+    "https://deepaksulakheds.github.io/portfolio-v1/Profile/deepak-3.aviff"
+  ]
+}
