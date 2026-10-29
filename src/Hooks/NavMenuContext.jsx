@@ -2,7 +2,7 @@ import { Badge, Person, WorkHistory, Workspaces } from "@mui/icons-material";
 import { createContext, useContext, useState } from "react";
 
 const navigationMenus = [
-  { label: "Profile", path: "/", icon: <Person /> },
+  { label: "profile", path: "/", icon: <Person /> },
   { label: "Experience", path: "/experience", icon: <WorkHistory /> },
   { label: "Projects", path: "/projects", icon: <Workspaces /> },
   { label: "Resume", path: "/resume", icon: <Badge /> },
@@ -12,7 +12,7 @@ const navigationMenus = [
 
 // const navigationMenus = [
 //   {
-//     label: "Profile",
+//     label: "profile",
 //     path: "/",
 //     icon: <Person />,
 //   },

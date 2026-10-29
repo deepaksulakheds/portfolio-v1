@@ -3,10 +3,10 @@ import "./header.css";
 import { useEffect, useState, memo } from "react";
 import { useThemeContext } from "../../Hooks/ThemeContext";
 
-import Deepak from "/Profile/deepak.avif";
-import Deepak1 from "/Profile/deepak-1.avif";
-import Deepak2 from "/Profile/deepak-2.avif";
-import Deepak3 from "/Profile/deepak-3.avif";
+import Deepak from "/profile/deepak.avif";
+import Deepak1 from "/profile/deepak-1.avif";
+import Deepak2 from "/profile/deepak-2.avif";
+import Deepak3 from "/profile/deepak-3.avif";
 
 const imagesList = [Deepak, Deepak1, Deepak2, Deepak3];
 
