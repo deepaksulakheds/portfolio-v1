@@ -4,6 +4,7 @@ import { Grid } from "@mui/system";
 import { Chip, IconButton, Popover, Tooltip, Typography } from "@mui/material";
 import {
   Call,
+  DataObject,
   GitHub,
   LinkedIn,
   LocationOn,
@@ -49,6 +50,12 @@ const INIT_CONTACS = [
     icon: <LocationOn fontSize="medium" />,
     ref: "//www.google.com/maps/place/Gadag-Betageri,+Karnataka",
     toolTip: "Gadag | KA",
+  },
+  {
+    name: "Data",
+    icon: <DataObject fontSize="medium" />,
+    ref: "https://deepaksulakheds.github.io/portfolio-v1/profile/data.json",
+    toolTip: "View JSON",
   },
 ];
 
