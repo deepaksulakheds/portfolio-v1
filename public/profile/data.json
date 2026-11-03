@@ -4,11 +4,11 @@
   "location": "Gadag | Karnataka | India",
   "bio": "Results-driven Software Engineer with 3+ years of professional experience in full-stack development using React, Node.js, REST and GraphQL APIs, and SQL/NoSQL databases. Proven ability to translate designs and prototypes into fully functional, end-to-end applications. Experienced in developing backend services, data-ingestion pipelines, and delivering end-to-end high-performance features. Collaborated with cross-teams to develop user-focused systems.",
   "email": "deepaksulakheds@gmail.com",
-  "social": {
-    "github": "https://github.com/deepaksulakheds",
-    "linkedin": "https://www.linkedin.com/in/deepaksulakheds/",
-    "portfolio": "https://deepaksulakheds.github.io/portfolio-v1/"
-  },
+
+  "github": "https://github.com/deepaksulakheds",
+  "linkedin": "https://www.linkedin.com/in/deepaksulakheds/",
+  "portfolio": "https://deepaksulakheds.github.io/portfolio-v1/",
+
   "images": [
     "https://deepaksulakheds.github.io/portfolio-v1/profile/deepak.avif",
     "https://deepaksulakheds.github.io/portfolio-v1/profile/deepak-1.avif",
