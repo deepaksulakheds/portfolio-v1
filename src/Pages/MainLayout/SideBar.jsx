@@ -165,26 +165,24 @@ function Sidebar({
       </Drawer>
 
       {/* Desktop Permanent Drawer */}
-      <Drawer
-        variant="permanent"
-        open
+      <Grid
         sx={{
           display: { xs: "none", sm: "block" },
-          "& .MuiDrawer-paper": {
-            width: drawerWidth,
-            boxSizing: "border-box",
-            transition: "width 0.3s",
-            overflowX: "hidden",
-            whiteSpace: "nowrap",
-            height: `100%`,
-            borderRadius: `0 15px 15px 0px;`,
-            backgroundColor: themeContext.surface,
-            border: `0.5px solid ${themeContext.borderColor}`,
-          },
+          position: "fixed",
+          width: drawerWidth,
+          boxSizing: "border-box",
+          transition: "width 0.3s",
+          overflowX: "hidden",
+          whiteSpace: "nowrap",
+          height: `calc(100% - 20px)`,
+          margin: "10px",
+          borderRadius: `15px`,
+          backgroundColor: themeContext.surface,
+          border: `0.5px solid ${themeContext.borderColor}`,
         }}
       >
         {renderDrawerContent(false)}
-      </Drawer>
+      </Grid>
     </Box>
   );
 }
