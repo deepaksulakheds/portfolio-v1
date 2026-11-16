@@ -328,8 +328,8 @@ function EditNotesDialog({
               },
               paper: {
                 sx: {
-                  backgroundColor: themeContext.surface,
-                  background: themeContext.surface,
+                  backgroundColor: themeContext.background,
+                  background: themeContext.background,
                   color: themeContext.secondary,
                   border: `1px solid ${themeContext.secondary}`,
                   borderRadius: "10px",

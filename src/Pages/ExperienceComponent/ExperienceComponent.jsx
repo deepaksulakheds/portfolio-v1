@@ -479,14 +479,14 @@ function EducationItem({ educationObj, index, themeContext }) {
           &nbsp;&nbsp; {educationObj.timePeriod}
         </Typography>
         <Chip
-          label={`Visit Site`}
+          label="Visit Site"
           size="small"
           sx={{
             fontWeight: "500",
             border: `1px solid ${themeContext.primary}`,
             color: themeContext.primary,
             "&:hover": {
-              boxShadow: `inset 0px 0px 10px 2px ${themeContext.primary}`,
+              boxShadow: `inset 0px 0px 15px 2px ${themeContext.primary}`,
             },
           }}
           onClick={() => {
