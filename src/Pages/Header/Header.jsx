@@ -308,7 +308,7 @@ function Header({ attachmentToggle }) {
         display: "flex",
         flexDirection: "column",
         padding: "20px",
-        backgroundColor: themeContext.surface,
+        backgroundColor: themeContext.titleSurface,
         boxShadow: `inset 0px 0px 35px -30px ${themeContext.containerShadowColor}`,
         border: `0.5px solid ${themeContext.borderColor}`,
       }}
@@ -329,7 +329,7 @@ function Header({ attachmentToggle }) {
               fontSize: "1.8rem",
               fontWeight: "550",
               marginBlock: "5px",
-              color: themeContext.titleText,
+              color: themeContext.colorOnPrimary,
             }}
           >
             Deepak Sulakhe
@@ -340,13 +340,13 @@ function Header({ attachmentToggle }) {
             onDoubleClick={() => handleSecretToggle()}
             label="Software Engineer - 2"
             sx={{
-              color: themeContext.subTitleText,
+              color: themeContext.colorOnPrimary,
               cursor: "text",
               fontWeight: secretContext.secretEnabled ? "bolder" : "400",
               boxShadow: `inset 0px 0px 15px 8px ${themeContext.chipShadow}`,
               border: secretContext.secretEnabled
                 ? `1px solid ${themeContext.primary}`
-                : `0.2px solid ${themeContext.subTitleText}`,
+                : `0.2px solid ${themeContext.colorOnPrimary}`,
               "&:hover": {
                 // backgroundColor: "inherit",
                 boxShadow: `inset 0px 0px 15px 8px ${themeContext.chipShadow}`,
@@ -389,11 +389,11 @@ function Header({ attachmentToggle }) {
                   sx={{
                     padding: "0.5rem",
                     transition: "all ease-in-out 0.15s",
-                    color: themeContext.secondary,
+                    color: themeContext.colorOnPrimary,
                     ...(anchorEl && contact.style),
                     "&:hover": {
-                      boxShadow: `inset 0px 0px 10px 2px ${themeContext.primary}`,
-                      color: themeContext.primary,
+                      boxShadow: `inset 0px 0px 10px 2px ${themeContext.colorOnPrimary}`,
+                      color: themeContext.colorOnPrimary,
                     },
                   }}
                   href={contact?.ref}

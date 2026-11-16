@@ -1,6 +1,7 @@
 import { memo } from "react";
 import { useThemeContext } from "../../Hooks/ThemeContext";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const Robot404Illustration = () => (
   <Box
@@ -367,6 +368,7 @@ const Robot404Illustration = () => (
 
 function NotFound() {
   const { themeContext } = useThemeContext();
+  const navigate = useNavigate();
 
   return (
     <Box
@@ -430,6 +432,22 @@ function NotFound() {
       >
         uh-oh! Page not found...
       </Typography>
+      <Button
+        sx={{
+          height: 40,
+          border: `1px solid ${themeContext.primary}`,
+          borderRadius: "7px",
+          textTransform: "none",
+          color: themeContext.primary,
+          fontWeight: "bold",
+          "&:hover": {
+            boxShadow: `inset 0px 0px 25px 0px ${themeContext.primary}`,
+          },
+        }}
+        onClick={() => navigate("/")}
+      >
+        Back to Home
+      </Button>
     </Box>
   );
 }

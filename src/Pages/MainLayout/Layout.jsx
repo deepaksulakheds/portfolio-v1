@@ -89,8 +89,8 @@ function Layout() {
           margin: "10px",
           borderRadius: 2,
           height: 56,
-          bgcolor: themeContext.surface,
-          color: "#000",
+          bgcolor: themeContext.titleSurface,
+          color: themeContext.colorOnPrimary,
           display: { xs: "flex", sm: "none" },
           border: `0.5px solid ${themeContext.borderColor}`,
           alignItems: "center",
@@ -102,12 +102,12 @@ function Layout() {
         <IconButton
           edge="start"
           onClick={handleDrawerToggle}
-          sx={{ color: themeContext.navItemTextColor }}
+          sx={{ color: themeContext.colorOnPrimary }}
         >
           <MenuIcon />
         </IconButton>
         <Typography
-          sx={{ ml: 2, fontWeight: "600", color: themeContext.titleText }}
+          sx={{ ml: 2, fontWeight: "600", color: themeContext.colorOnPrimary }}
         >
           {currentPageLabel}
         </Typography>

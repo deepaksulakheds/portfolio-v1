@@ -5,26 +5,28 @@ const themeOptions = {
     // Nav Colors
     navItemTextColor: "#646464",
     navItemBackgroundColor: "",
-    selectedNavTextColor: "rgba(32, 51, 84, 1)",
-    selectedNavBackgroundColor: "rgba(32, 51, 84, 1)",
+    selectedNavTextColor: "rgba(242, 235, 227, 1)",
+    selectedNavBackgroundColor: "rgba(52, 41, 35, 1)",
 
-    primary: "rgba(32, 51, 84, 1)",
-    lightPrimary: "rgba(32, 51, 84, 0.5)",
-    colorOnPrimary: "#fff",
+    primary: "rgba(52, 41, 35, 1)",
+    lightPrimary: "rgba(52, 41, 35, 0.5)",
+    colorOnPrimary: "rgba(242, 235, 227, 1)",
 
-    secondary: "rgba(32, 51, 84, 1)",
-    lightSecondary: "rgba(32, 51, 84, 0.5)",
-    colorOnSecondary: "rgba(32, 51, 84, 1)",
+    secondary: "rgba(52, 41, 35, 1)",
+    lightSecondary: "rgba(52, 41, 35, 0.5)",
+    colorOnSecondary: "rgba(52, 41, 35, 1)",
 
-    background: "#fff",
-    surface: "rgb(219, 219, 219)",
+    background: "rgba(242, 235, 227, 1)",
+    titleSurface: "rgba(52, 41, 35, 1)",
+    surface: "rgb(207, 195, 178)",
+
     borderColor: "#C8C8C8",
     // Text Colors
-    titleText: "rgba(32, 51, 84, 1)",
-    subTitleText: "rgba(32, 51, 84, 1)",
-    bodyText: "rgba(32, 51, 84, 1)",
+    titleText: "rgba(35, 29, 25, 1)",
+    subTitleText: "rgba(35, 29, 25, 1)",
+    bodyText: "rgba(35, 29, 25, 1)",
     textDisabled: "#999999",
-    helperText: "rgba(32, 51, 84, 0.65)",
+    helperText: "rgba(138, 130, 123, 0.8)",
 
     disabledBackground: "rgba(0, 0, 0, 0.2)",
     disabled: "#2e2e2e",
@@ -50,6 +52,7 @@ const themeOptions = {
     colorOnSecondary: "#000",
 
     background: "#0D1117",
+    titleSurface: "#202329",
     surface: "#202329",
     borderColor: "#30363D",
 

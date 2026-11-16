@@ -75,7 +75,7 @@ function Sidebar({
 
       <Box
         sx={{
-          borderTop: `0.7px solid ${themeContext.primary}`,
+          borderTop: `0.7px solid ${themeContext.colorOnPrimary}`,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -153,7 +153,7 @@ function Sidebar({
         slotProps={{
           paper: {
             sx: {
-              backgroundColor: themeContext.surface,
+              backgroundColor: themeContext.titleSurface,
               borderRadius: `0 10px 10px 0;`,
             },
           },
@@ -177,7 +177,7 @@ function Sidebar({
           height: `calc(100% - 20px)`,
           margin: "10px",
           borderRadius: `15px`,
-          backgroundColor: themeContext.surface,
+          backgroundColor: themeContext.titleSurface,
           border: `0.5px solid ${themeContext.borderColor}`,
         }}
       >
@@ -219,16 +219,23 @@ const ToggleButton = memo(
             alignItems: "center",
             justifyContent: isCollapsed ? "center" : "flex-start",
             cursor: "pointer",
-            margin: "8px",
+            margin: "5px",
             width: "80%",
             borderRadius: 2,
+            padding: "5px",
             color: themeContext.navItemTextColor,
             "& *": {
               color: themeContext.navItemTextColor,
             },
+            // "&:hover *": {
+            //   color: themeContext.colorOnPrimary,
+            //   filter: `drop-shadow(0 0 0.5px ${themeContext.colorOnPrimary})`,
+            // },
+            "&:hover": {
+              boxShadow: `inset 0px 0px 35px -5px ${themeContext.selectedNavTextColor}`,
+            },
             "&:hover *": {
-              color: themeContext.primary,
-              filter: `drop-shadow(0 0 0.5px ${themeContext.primary})`,
+              color: themeContext.selectedNavTextColor,
             },
           }}
         >
@@ -283,8 +290,9 @@ const NavItemButton = memo(
             width: level > 0 ? "calc(100% - 10px)" : "100%",
             textOverflow: "ellipsis",
             borderRadius: 2,
-            borderLeft: isSelected
-              ? `4px solid ${themeContext.primary}`
+            // highlight selected menu
+            boxShadow: isSelected
+              ? `inset 0px 0px 35px -5px ${themeContext.selectedNavTextColor}`
               : "none",
             "& *": {
               filter:
@@ -294,9 +302,11 @@ const NavItemButton = memo(
                 : themeContext.navItemTextColor,
             },
             ...(!isSelected && {
+              "&:hover": {
+                boxShadow: `inset 0px 0px 35px -5px ${themeContext.selectedNavTextColor}`,
+              },
               "&:hover *": {
-                color: themeContext.primary,
-                filter: `drop-shadow(0 0 0.5px ${themeContext.primary})`,
+                color: themeContext.selectedNavTextColor,
               },
             }),
           }}
@@ -440,7 +450,7 @@ const MenuItem = memo(
             slotProps={{
               paper: {
                 sx: {
-                  backgroundColor: themeContext.surface,
+                  backgroundColor: themeContext.titleSurface,
                   borderRadius: 2,
                   boxShadow: `0 4px 12px rgba(0, 0, 0, 0.2)`,
                   marginLeft: "8px",
